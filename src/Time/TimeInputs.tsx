@@ -92,9 +92,10 @@ function TimeInputs({
           inputType={inputType}
           maxFontSizeMultiplier={1.2}
           selectionColor={
-            theme.dark
-              ? Color(theme.colors.primary).darken(0.2).hex()
-              : theme.colors.primary
+            // theme.dark
+            //   ? Color(theme.colors.primary).darken(0.2).hex()
+            //   : theme.colors.primary
+            "#00CF91"
           }
           returnKeyType={'next'}
           onSubmitEditing={onSubmitStartInput}
@@ -163,9 +164,10 @@ function TimeInputs({
           inputType={inputType}
           maxFontSizeMultiplier={1.2}
           selectionColor={
-            theme.dark
-              ? Color(theme.colors.primary).darken(0.2).hex()
-              : theme.colors.primary
+            // theme.dark
+            //   ? Color(theme.colors.primary).darken(0.2).hex()
+            //   : theme.colors.primary
+            "#00CF91"
           }
           onSubmitEditing={onSubmitEndInput}
           onChanged={(newMinutesFromInput) => {

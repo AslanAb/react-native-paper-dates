@@ -8,12 +8,12 @@ import {
 } from 'react-native'
 import { useTheme, TouchableRipple } from 'react-native-paper'
 
-import Color from 'color'
+// import Color from 'color'
 import {
   inputTypes,
   PossibleClockTypes,
   PossibleInputTypes,
-  useInputColors,
+  // useInputColors,
 } from './timeUtils'
 
 interface TimeInputProps
@@ -60,7 +60,7 @@ function TimeInput(
 
   const highlighted = inputType === inputTypes.picker ? pressed : inputFocused
 
-  const { color, backgroundColor } = useInputColors(highlighted)
+  // const { color, backgroundColor } = useInputColors(highlighted)
 
   let formattedValue = controlledValue
   if (!inputFocused) {
@@ -78,14 +78,15 @@ function TimeInput(
           styles.input,
           // eslint-disable-next-line react-native/no-inline-styles
           {
-            color,
+            color: theme.isV3 && highlighted ? "#00CF91" : "#3F444A",
             fontSize: inputFontSize,
-            backgroundColor,
+            backgroundColor: theme.isV3 && highlighted ? "#DCFEE3": "white",
             borderRadius: theme.roundness * 2,
             borderColor:
-              theme.isV3 && highlighted
-                ? theme.colors.onPrimaryContainer
-                : undefined,
+              // theme.isV3 && highlighted
+              //   ? theme.colors.onPrimaryContainer
+              //   : undefined,
+              theme.isV3 && highlighted ? "#DCFEE3": "white",
             borderWidth: theme.isV3 && highlighted ? 2 : 0,
             height: inputType === inputTypes.keyboard ? 72 : 80,
           },
@@ -111,7 +112,8 @@ function TimeInput(
           ]}
           rippleColor={
             Platform.OS !== 'ios'
-              ? Color(theme.colors.onSurface).fade(0.7).hex()
+              // ? Color(theme.colors.onSurface).fade(0.7).hex()
+              ? "#00CF91"
               : undefined
           }
           onPress={() => onPress(clockType)}

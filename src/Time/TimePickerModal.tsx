@@ -163,20 +163,21 @@ export function TimePickerModal({
                 styles.modalContent,
                 {
                   backgroundColor:
-                    theme.dark && theme.isV3
-                      ? theme.colors.elevation.level3
-                      : theme.isV3
-                      ? theme.colors.surface
-                      : theme.dark
-                      ? overlay(10, theme.colors.surface)
-                      : theme.colors.surface,
+                    // theme.dark && theme.isV3
+                    //   ? theme.colors.elevation.level3
+                    //   : theme.isV3
+                    //   ? theme.colors.surface
+                    //   : theme.dark
+                    //   ? overlay(10, theme.colors.surface)
+                    //   : theme.colors.surface,
+                    "white",
                   borderRadius: theme.isV3
                     ? theme.roundness * 6
                     : theme.roundness,
                 },
               ]}
             >
-              <View style={styles.labelContainer}>
+              {/* <View style={styles.labelContainer}>
                 <Text
                   maxFontSizeMultiplier={1.5}
                   style={[
@@ -191,7 +192,7 @@ export function TimePickerModal({
                 >
                   {uppercase ? labelText.toUpperCase() : labelText}
                 </Text>
-              </View>
+              </View> */}
               <View style={styles.timePickerContainer}>
                 <TimePicker
                   locale={locale}
