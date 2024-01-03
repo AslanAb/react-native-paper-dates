@@ -1,9 +1,11 @@
 import * as React from 'react'
+import { BlurView } from "expo-blur";
+import { Pressable } from 'react-native';
 import {
   Modal,
   StyleSheet,
   View,
-  Text,
+  // Text,
   Animated,
   TouchableWithoutFeedback,
   KeyboardAvoidingView,
@@ -12,8 +14,8 @@ import {
 import {
   Button,
   IconButton,
-  MD2Theme,
-  overlay,
+  // MD2Theme,
+  // overlay,
   useTheme,
 } from 'react-native-paper'
 
@@ -79,13 +81,13 @@ export function TimePickerModal({
   const theme = useTheme()
   const defaultUppercase = !theme.isV3
   const uppercase = _uppercase ?? defaultUppercase
-  let textFont
-  let labelText = label
+  // let textFont
+  // let labelText = label
 
   if (theme.isV3) {
-    textFont = theme.fonts.labelMedium
+    // textFont = theme.fonts.labelMedium
   } else {
-    textFont = (theme as any as MD2Theme)?.fonts.medium
+    // textFont = (theme as any as MD2Theme)?.fonts.medium
   }
 
   const [inputType, setInputType] = React.useState<PossibleInputTypes>(
@@ -100,7 +102,7 @@ export function TimePickerModal({
   )
 
   if (inputType === inputTypes.keyboard && !label) {
-    labelText = 'Enter time'
+    // labelText = 'Enter time'
   }
 
   React.useEffect(() => {
@@ -140,13 +142,13 @@ export function TimePickerModal({
       supportedOrientations={supportedOrientations}
       statusBarTranslucent={true}
     >
-      <>
-        <TouchableWithoutFeedback onPress={onDismiss}>
+      <BlurView intensity={2} tint="dark" style={{flex: 1}}>
+      <TouchableWithoutFeedback onPress={onDismiss} >
           <View
             style={[
               StyleSheet.absoluteFill,
               styles.modalBackground,
-              { backgroundColor: theme.colors?.backdrop },
+              { backgroundColor: "rgba(0,0,0,0.4)" },
             ]}
           />
         </TouchableWithoutFeedback>
@@ -233,7 +235,7 @@ export function TimePickerModal({
             </Animated.View>
           </KeyboardAvoidingView>
         </View>
-      </>
+      </BlurView>
     </Modal>
   )
 }

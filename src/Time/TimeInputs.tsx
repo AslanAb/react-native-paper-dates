@@ -17,7 +17,7 @@ import {
 import TimeInput from './TimeInput'
 import AmPmSwitcher from './AmPmSwitcher'
 import { useLatest } from '../utils'
-import Color from 'color'
+// import Color from 'color'
 import { getTranslation } from '../translations/utils'
 
 function TimeInputs({
