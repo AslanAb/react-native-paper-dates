@@ -4,7 +4,7 @@ import {
   Modal,
   StyleSheet,
   View,
-  // Text,
+  Text,
   Animated,
   TouchableWithoutFeedback,
   KeyboardAvoidingView,
@@ -220,7 +220,9 @@ export function TimePickerModal({
                 />
                 <View style={styles.fill} />
                 <Button onPress={onDismiss} uppercase={uppercase}>
-                  {cancelLabel}
+                  <Text style={{ color: "#00CF91", fontSize: 18 }}>
+                    {cancelLabel}
+                  </Text>
                 </Button>
                 <Button
                   onPress={() =>
@@ -228,7 +230,9 @@ export function TimePickerModal({
                   }
                   uppercase={uppercase}
                 >
-                  {confirmLabel}
+                  <Text style={{ color: "#00CF91", fontSize: 18 }}>
+                    {confirmLabel}
+                  </Text>
                 </Button>
               </View>
             </Animated.View>

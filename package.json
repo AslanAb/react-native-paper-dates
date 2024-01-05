@@ -1,6 +1,6 @@
 {
   "name": "@aslanab/react-native-paper-dates",
-  "version": "0.21.8",
+  "version": "0.21.9",
   "description": "Forked library: Performant Date Picker for React Native Paper",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
